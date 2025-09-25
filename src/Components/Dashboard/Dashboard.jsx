@@ -7,27 +7,31 @@ import axiosBase from '../../axiosConfig.js'
 import { BsPersonCircle } from "react-icons/bs";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Link } from 'react-router-dom'
+import { ClipLoader } from 'react-spinners'
 
 
 
 
 function Dashboard() {
     const [Questions, setQuestions] = useState([])
+    const [Loader, setLoader] = useState(false);
     const { UserInfo } = useContext(UserContext)
     useEffect(() => {
         const fetchQuestions = async () => {
             const token = localStorage.getItem('token');
             try {
+                setLoader(true)
                 const response = await axiosBase.get('/question/all-questions', {
                     headers: {
                         authorization: `Bearer ${token}`
                     }
                 })
                 console.log(response?.data)
-                // console.log(r)
                 setQuestions(response.data)
+                setLoader(false)
             } catch (error) {
                 console.log(error)
+                setLoader(false)
             }
         }
         fetchQuestions()
@@ -36,6 +40,7 @@ function Dashboard() {
     return (
         <>
             <Layout>
+                {Loader && <div><ClipLoader /></div>}
                 <div className={classes.Container}>
                     <div className={classes.Header}>
                         <Link to={'/question/askQuestion'}><div className={classes.ask_Question}>Ask Question</div></Link>
@@ -58,7 +63,6 @@ function Dashboard() {
                                         </div>
                                         <hr />
                                     </Link>
-
                                 </>
                             )
                         })}
