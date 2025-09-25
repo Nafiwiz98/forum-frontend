@@ -6,7 +6,7 @@ import Landing from "./Components/Landing/Landing.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import SingleQuestion from "./Pages/SingleQuestion.jsx";
-import AskQuestion from "./Pages/AskQuestion/askQuestion.jsx";
+import AskQuestion from "./Pages/AskQuestion/AskQuestion.jsx";
 
 
 function Router() {
