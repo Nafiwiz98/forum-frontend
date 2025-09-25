@@ -1,0 +1,42 @@
+.Container {
+  background-color: #f5f5f5;
+  justify-content: center;
+  display: flex;
+  gap: 50px;
+  /* justify-content: center; */
+  /* text-align: center; */
+  padding-bottom: 30px;
+  align-items: center;
+}
+.form {
+  margin-top: 30px;
+  /* background-color: red; */
+}
+.moreInfo {
+  width: 35%;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column; /* or column */
+  flex-wrap: wrap; /* needed for multi-line layouts */
+  gap: 15px;
+  /* background-color: red; */
+}
+.moreInfo h4 {
+  color: #ff8101;
+}
+.moreInfo h2 {
+  color: #45406a;
+}
+.moreInfo p {
+  font-size: 13px;
+}
+.moreInfo button {
+  width: 140px;
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+  background-color: #ff8101;
+  border: none;
+  border-radius: 5px;
+}

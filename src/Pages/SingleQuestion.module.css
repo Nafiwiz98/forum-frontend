@@ -1,0 +1,70 @@
+.Container {
+  /* background-color: blue; */
+  padding-top: 30px;
+  padding: 0 5rem;
+  flex: 1;
+  background-color: #f5f5f5;
+}
+.question {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding-bottom: 15px;
+}
+.asker {
+  font-style: italic;
+  font-weight: bolder;
+  color: gray;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.question_desc {
+  padding-bottom: 20px;
+}
+
+.createdAt {
+  color: gray;
+  margin-left: auto;
+}
+.answerOwnerInfo {
+  text-align: center;
+}
+.answers {
+  padding: 10px 1rem;
+  display: flex;
+  background-color: lightgray;
+  margin: 20px 1rem;
+  align-items: center;
+}
+.answers p {
+  font-size: 15px;
+  padding: 0 1rem;
+}
+.Form {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.Form form input {
+  height: 70px;
+}
+.Form form button {
+  width: 30%;
+}
+.question_desc {
+  padding-bottom: 40px;
+}
+.description {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 0 30px;
+}
+.description .descTitle {
+  font-style: italic;
+  color: gray;
+  font-weight: bolder;
+}
+.questionTitle {
+  border-bottom: 2px solid #ff8101;
+  padding-bottom: 5px;
+}

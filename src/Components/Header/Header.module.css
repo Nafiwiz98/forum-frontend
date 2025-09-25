@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Container{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    height:68px;
+    align-items: center;
+    gap:250px;
+}
+.Logo img{
+    /* background-color: blue; */
+    width: 170px;
+}
+.Links{
+    /* background-color: gray; */
+    
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.Links a{
+    text-decoration: none;
+    color: black;
+}
+.singInButton{
+    width: 130px;
+    height: 30px;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+}
