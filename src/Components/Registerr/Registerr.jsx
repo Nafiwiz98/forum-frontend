@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../Layout/Layout'
-import classes from './registerr.module.css'
+import classes from './Registerr.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useRef } from 'react'
 import axiosBase from '../../axiosConfig'
