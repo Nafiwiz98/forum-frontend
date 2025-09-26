@@ -13,7 +13,7 @@ import { useContext } from 'react'
 
 function Login() {
   const [Error, setError] = useState();
-  const [ValidationError, setValidationError] = useState();
+  // const [ValidationError, setValidationError] = useState();
   const [SuccessMessage, setSuccessMessage] = useState();
   const [Loader, setLoader] = useState(false);
   const navigate = useNavigate()
@@ -50,12 +50,12 @@ function Login() {
       navigate('/dashboard');
     } catch (err) {
       setLoader(false)
-      const errorMessage = err?.response?.data?.msg?.map((error) => {
-        return error.msg
-      })
-      console.log()
+      // const errorMessage = err?.response?.data?.msg?.map((error) => {
+      //   return error.msg
+      // })
+      console.log(err.response?.data)
       setError(err.response?.data?.msg)
-      setValidationError(errorMessage);
+      // setValidationError(errorMessage);
       setTimeout(() => setError(null), 7000);
     }
   }
@@ -66,11 +66,11 @@ function Login() {
         <p className={classes.para}>Already have an account? <Link to='/'>Sign in</Link></p>
         {SuccessMessage && <div className={classes.SuccessBox}>{SuccessMessage}</div>}
 
-        {(Error || ValidationError) && (
+        {Error &&
           <div className={classes.errorBox}>
-            {Error || ValidationError}
+            {Error}
           </div>
-        )}
+        }
 
         <form onSubmit={handleSubmit}>
           <input type="text" ref={emailTracker} placeholder='Email' />
