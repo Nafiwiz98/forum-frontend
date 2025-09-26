@@ -53,8 +53,9 @@ function Login() {
       // const errorMessage = err?.response?.data?.msg?.map((error) => {
       //   return error.msg
       // })
-      console.log(err.response?.data)
-      setError(err.response?.data?.msg)
+      // console.log(err)
+      console.log(err.response?.data || err.message)
+      setError(err.response?.data?.msg || err.message)
       // setValidationError(errorMessage);
       setTimeout(() => setError(null), 7000);
     }
